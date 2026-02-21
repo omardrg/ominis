@@ -1,0 +1,323 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-12-23 16:00+0100\n"
+"PO-Revision-Date: 2026-02-21 13:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#: style.css:6
+msgid "Custom theme developed by Onaweb for Ominis.es based on underscores.me and using Bootstrap 5.3.8, Fancybox 6.1.11, Isotope 3.0.6, Font Awesome 7.2.0."
+msgstr "Tema personalitzat desenvolupat per Onaweb per a Ominis.es basat en underscores.me i utilitzant Bootstrap 5.3.8, Fancybox 6.1.11, Isotope 3.0.6, Font Awesome 7.2.0."
+
+#: functions.php:313
+msgid "Ominis Theme: Instructions <small>2.0.0</small>"
+msgstr "Tema Ominis: Instruccions <small>2.0.0</small>"
+
+#: functions.php:314
+msgid "Posts"
+msgstr "Entrades"
+
+#: functions.php:315
+msgid "The Ominis theme is optimized to display the latest posts on the homepage. To display them correctly, you need to configure the following for each post:"
+msgstr "El tema Ominis està optimitzat per mostrar les últimes entrades a la pàgina d'inici. Per mostrar-les correctament cal configurar el següent per a cada entrada:"
+
+#: functions.php:318
+msgid "<strong>Featured image</strong>: Attach an image with a size of 642px wide by 800px high."
+msgstr "<strong>Imatge destacada</strong>: adjunta una imatge amb una mida de 642px d'amplada per 800px d'alçada."
+
+#: functions.php:321
+msgid "<strong>Extract</strong>: Add a short descriptive text."
+msgstr "<strong>Extracte</strong>: afegeix un breu text descriptiu."
+
+#: functions.php:324
+msgid "In addition, there are two formats available for posts:"
+msgstr "A més, per a les entrades hi ha dos formats disponibles:"
+
+#: functions.php:327
+msgid "<strong>Standard</strong>: default format."
+msgstr "<strong>Estàndard</strong>: format per defecte."
+
+#: functions.php:330
+msgid "<strong>Gallery (optimized for the new Guternberg editor)</strong>: Add each image inside an \"Image\" block to create a mosaic of images."
+msgstr "<strong>Galeria (optimitzada per al nou editor Gutenberg)</strong>: afegeix cada imatge dins d'un bloc de \"Imatge\" per crear un mosaic d'imatges."
+
+#: functions.php:331 functions.php:345
+msgid "In the \"Advanced\" section of each block, add additional CSS classes as if they were tags to create a filter menu at the beginning of the gallery."
+msgstr "A la secció \"Avançat\" de cada bloc, afegeix classes CSS adicionals com si fossin etiquetes per crear un menú de filtres al principi de la galeria."
+
+#: functions.php:334
+msgid "Pages"
+msgstr "Pàgines"
+
+#: functions.php:335
+msgid "There are three templates available for the pages:"
+msgstr "Per a les pàgines hi ha tres plantilles disponibles:"
+
+#: functions.php:338
+msgid "<strong>Default template</strong>: default format."
+msgstr "<strong>Plantilla per defecte</strong>: format per defecte."
+
+#: functions.php:341
+msgid "<strong>Mosaic (optimized for the new Guternberg editor)</strong>: Add each image within an \"Image\" block to create a mosaic of images."
+msgstr "<strong>Mosaic (optimitzat per al nou editor Gutenberg)</strong>: afegeix cada imatge dins d'un bloc de \"Imatge\" per crear un mosaic d'imatges."
+
+#: functions.php:344
+msgid "<strong>Mosaic with filters (optimized for the new Guternberg editor)</strong>: Add each image inside an \"Image\" block to create a mosaic of images."
+msgstr "<strong>Mosaic amb filtres (optimitzat per al nou editor Gutenberg)</strong>: afegeix cada imatge dins d'un bloc de \"Imatge\" per crear un mosaic d'imatges."
+
+#: functions.php:348
+msgid "Social networks"
+msgstr "Xarxes socials"
+
+#: functions.php:349
+msgid "In the menu <a href=\"%1$s\" target=\"_blank\">Appearance &gt; Customize: Social Networks</a>, you add the links to the social networks you want to display in the main menu."
+msgstr "En el menú <a href=\"%1$s\" target=\"_blank\">Aparença &gt; Personalitzar: Xarxes socials</a> s'afegeixen els enllaços a les xarxes socials que es volen mostrar al menú principal."
+
+#: functions.php:350
+msgid "In the <a href=\"%1$s\" target=\"_blank\">Appearance & Widgets</a> menu, you can add social widgets to the <strong>Social</strong> bar."
+msgstr "En el menú <a href=\"%1$s\" target=\"_blank\">Aparença &gt; Widgets</a> es poden afegir widgets socials a la barra <strong>Social</strong>."
+
+# inc/customizer.php:63
+#: functions.php:351
+msgid "Credits"
+msgstr "Crèdits"
+
+#: functions.php:352
+msgid "In the menu <a href=\"%1$s\" target=\"_blank\">Appearance > Customize: Footer</a>, you can change the text that appears in the credits area of ​​the footer."
+msgstr "En el menú <a href=\"%1$s\" target=\"_blank\">Aparença &gt; Personalitzar: Peu de pàgina</a> es canvia el text que apareix a la zona de crèdits del peu de pàgina"
+
+#: functions.php:353
+msgid "Cookies policy"
+msgstr "Política de cookies"
+
+#: functions.php:354
+msgid "In the menu <a href=\"%1$s\" target=\"_blank\">Appearance > Customize: Footer</a>, select the page that will contain the website's cookie policy information."
+msgstr "En el menú <a href=\"%1$s\" target=\"_blank\">Aparença &gt; Personalitzar: Peu de pàgina</a> es selecciona la pàgina que contindrà la informació sobre la política de cookies del lloc web."
+
+#: functions.php:355
+msgid "The warning text is customized in the translation file."
+msgstr "El text d'avís es personalitza al fitxer de traducció."
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Vaja, ho sentim! No hem pogut trobar la pàgina."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Sembla que no vam trobar res en aquesta ubicació. Prova un dels enllaços a continuació o fes una cerca?"
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Categories més usades"
+
+#. translators: %1$s: smiley
+#: 404.php:47
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Prova de buscar a l'arxiu mensual. %1$s"
+
+#. translators: 1: title.
+#: comments.php:34
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats."
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:20
+msgid "Proudly powered by %s"
+msgstr "Amb l'orgull de fer funcionar %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:25
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s per %2$s."
+
+#: functions.php:47
+msgid "Primary"
+msgstr "Principal"
+
+#: functions.php:105
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:107
+msgid "Add widgets here."
+msgstr "Afegeix aquí més widgets."
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Salta al contingut"
+
+#: header.php:45
+msgid "Primary Menu"
+msgstr "Menú Principal"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:52
+msgid ", "
+msgstr ", "
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:55
+msgid "Posted in %1$s"
+msgstr "Publicat en %1$s"
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:62
+msgid "Tagged %1$s"
+msgstr "Etiquetat com %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:72
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Deixa un Comentari<span class=\"screen-reader-text\"> en %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:89 template-parts/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Edita <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+msgid "Search Results for: %s"
+msgstr "Resultats de Cerca per a: %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "No hem trobat res aquí..."
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Estàs llest per publicar la teva primera entrada? <a href=\"%1$s\">Comença aquí</a>."
+
+#: template-parts/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Ho sentim, però res no va coincidir amb els teus termes de cerca. Si us plau, torna a intentar-ho amb paraules clau diferents."
+
+#: template-parts/content-none.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Sembla que no podem trobar el que estàs buscant. Potser una cerca pot ajudar."
+
+#: template-parts/content-page.php:22 template-parts/content.php:45
+msgid "Pages:"
+msgstr "Pàgines:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:34
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continua llegint<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. Theme Name of the plugin/theme
+msgid "_s"
+msgstr "_s"
+
+#. Theme URI of the plugin/theme
+msgid "https://underscores.me/"
+msgstr "https://underscores.me/"
+
+#. Description of the plugin/theme
+msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgstr "Hola. Soc una plantilla bàsica anomenada <code>_s</code>, o <em>underscores</em>, si ho prefereixes. Soc una plantilla per ser treballada directament, de manera que millor no em facis servir com una <em>Plantilla Mare</em>. En el seu lloc, intenta transformar-me en el properi, més fantàstic, millor tema de WordPress que mai ha existit. Per a això és per a què estic aquí.\""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr "Automattic"
+
+#. Author URI of the plugin/theme
+msgid "https://automattic.com/"
+msgstr "https://automattic.com/"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:40
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentari en &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentaris en &ldquo;%2$s&rdquo;"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publicat el %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:35
+msgctxt "post author"
+msgid "by %s"
+msgstr "per %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59
+msgctxt "list item separator"
+msgid ", "
+msgstr ", "
+
+#: inc/customizer.php:54
+msgid "Footer"
+msgstr "Peu de pàgina"
+
+#: footer.php:52
+msgid "We use our own and third-party cookies to perform the analysis of user navigation and improve our services. By clicking I accept the said cookies. You can obtain more information, or know how to change the configuration, by clicking on "
+msgstr "En aquest web no utilitzem cookies ni recopilem informació de cap mena. Pots obtenir més informació, o bé conèixer com canviar la configuració, fent clic a "
+
+#: footer.php:53
+msgid "More information"
+msgstr "Més informació"
+
+#: footer.php:54
+msgid "Accept"
+msgstr "Accepto"
+
+#: inc/customizer.php:83
+msgid "Cookies advice page"
+msgstr "Pàgina d'avís de cookies"
+
+#: template-parts/content-filtermasonry:21
+msgid "Show all"
+msgstr "Mostra tots"
+
+#: page-masonry:5
+msgid "Masonry"
+msgstr "Mosaic"
+
+#: page-masonryfilter:5
+msgid "Masonry Filter"
+msgstr "Mosaic amb filtres"
+
+#: template-parts/content-list.php:33
+msgid "Read more"
+msgstr "Llegir més"
+
+#: single.php:23
+msgid "Previous:"
+msgstr "Anterior:"
+
+#: single.php:24
+msgid "Next:"
+msgstr "Següent:"
+
+#: footer.php:54
+msgid "Privacy policy"
+msgstr "Política de privacitat"
+
+#: inc\customizer.php:100
+msgid "- Select -"
+msgstr "- Seleccionar -"

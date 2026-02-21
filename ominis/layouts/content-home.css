@@ -1,0 +1,48 @@
+/*
+ * Theme Name: ominis
+ *
+ * Layout: Content-Home
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+
+.home main figure {
+	position:relative;
+	overflow:hidden;
+}
+	.home main figure img {
+		transition:all 0.3s ease;
+	}
+	.home main figure:hover img {
+		transform:scale(1.2);
+		filter:brightness(0.6);
+	}
+
+	.home main figure figcaption {
+		position:absolute;
+		top:.5rem;
+		left:.5rem;
+		right:.5rem;
+		background-color:rgba(52,58,64,0.9);
+		opacity:1;
+		transition:opacity 0.3s ease;
+	}
+	@media all and (min-width:992px){
+		.home main figure figcaption {
+			opacity:0;
+		}
+	}
+	.home main figure:hover figcaption {
+		opacity:1;
+	}
+
+.home main figure, .home main img.size-post-thumbnail {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.home main a, .home main a:hover {
+	text-decoration:none;
+}
