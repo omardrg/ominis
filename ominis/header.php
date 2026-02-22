@@ -77,18 +77,8 @@ global $dataOminis;
 							<?php if ($dataOminis['email']!='') {
 								$txtEmail = explode('@',$dataOminis['email']);
 								?>
-								<li class="nav-item">
-									<script>
-
-									nom = "<?php echo $txtEmail[0];?>";
-									cargolina = "@";
-									servidor="<?php echo $txtEmail[1];?>";
-									document.write("<a class=\"nav-link link-light- \" href=\"mailto:"+nom+cargolina+servidor+"\" target=\"_blank\">");
-									</script>
-									<i class="fas fa-envelope-square fa-2x"></i>
-									<script>
-									document.write("</a>");
-									</script>
+								<li class="nav-item" id="ominisEmailAddress" data-str1="<?php echo $txtEmail[0];?>" data-str2="<?php echo $txtEmail[1];?>">
+									<a class="nav-link link-light- " href="mailto:" target="_blank"><i class="fas fa-envelope-square fa-2x"></i></a>
 								</li>
 							<?php } ?>
 								<li class="nav-item">
