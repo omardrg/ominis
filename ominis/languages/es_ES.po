@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2016-12-23 16:00+0100\n"
-"PO-Revision-Date: 2026-02-21 14:16+0100\n"
+"PO-Revision-Date: 2026-02-22 14:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -223,26 +223,6 @@ msgstr "Páginas:"
 #: template-parts/content.php:34
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Siga leyendo <span class=\"screen-reader-text\"> \"%s\"</span>"
-
-#. Theme Name of the plugin/theme
-msgid "_s"
-msgstr "_s"
-
-#. Theme URI of the plugin/theme
-msgid "https://underscores.me/"
-msgstr "https://underscores.me/"
-
-#. Description of the plugin/theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
-msgstr "Hola. Soy una plantilla básica llamada <code>_s</code>, o <em>underscores</em>, si prefieres. Soy una plantilla para ser trabajada directamente, de modo que mejor no me uses como una <em>Plantilla Madre</em>. En su lugar, intenta transformarme en el próximo, súper-genial, mejor tema de WordPress que nunca existió. Para eso es por lo que estoy aquí.\""
-
-#. Author of the plugin/theme
-msgid "Automattic"
-msgstr "Automattic"
-
-#. Author URI of the plugin/theme
-msgid "https://automattic.com/"
-msgstr "https://automattic.com/"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:40
