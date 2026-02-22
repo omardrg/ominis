@@ -113,5 +113,10 @@
 		$(this).addClass('lightbox');
 		$(this).data('caption', $(this).parent('figure').find('figcaption').text());
 	});
+
+	// Email address
+	const OMINISSTR1 = $('#ominisEmailAddress').data('str1');
+	const OMINISSTR2 = $('#ominisEmailAddress').data('str2');
+	$('#ominisEmailAddress').find('a').attr('href',`mailto:${OMINISSTR1}@${OMINISSTR2}`);
 			
 } )( jQuery );
