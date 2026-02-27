@@ -1,0 +1,70 @@
+/*
+ * Theme Name: ominis
+ *
+ * Layout: Custom
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+#ominis_cookies_alert {
+	width:auto;
+	transition:bottom 0.3s ease;
+}
+
+@media all and (min-width:768px){
+	#ominis_cookies_alert {
+		width:50%;
+		margin-left:auto !important;
+	}
+}
+
+@media all and (min-width:992px){
+	#ominis_cookies_alert {
+		width:33.33%;
+		margin-left:auto !important;
+	}
+}
+
+@media all and (min-width:1200px){
+	#ominis_cookies_alert {
+		width:25%;
+		margin-left:auto !important;
+	}
+}
+
+.filter-masonry figcaption {
+	text-align:center;
+}
+
+.fancybox-thumbs__list a::before {
+    border-color: #545b62;
+}
+/*
+@media screen and (max-width:767px){
+	body, h5, .h5, .navbar-brand{
+		font-size:1.5rem;
+	}
+}
+*/
+a:not(header a)  {
+	color: #425d76;
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.cat-links, .tags-links, .edit-link {
+	margin-inline-end: 1rex;
+	&::after {
+		content: ".";
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
