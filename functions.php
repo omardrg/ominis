@@ -109,6 +109,9 @@ function ominis_setup() {
 	// Add support for wide alignment.
 	add_theme_support( 'align-wide' );
 
+	// Add support for editor styling.
+	add_editor_style( 'assets/bootstrap-5.3.8-dist/css/bootstrap.min.css' );
+
 }
 add_action( 'after_setup_theme', 'ominis_setup' );
 
