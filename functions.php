@@ -367,3 +367,63 @@ function ominis_instrucciones() {
 	</div>
 <?php	
 }
+
+// fallback menu
+function ominis_fallback_menu() {
+    echo '<ul class="navbar-nav ms-auto">';
+    wp_list_pages( array(
+        'title_li' => '',
+        'walker'   => new Ominis_Fallback_Walker(),
+        'depth'    => 2
+    ) );
+    echo '</ul>';
+}
+
+
+class Ominis_Fallback_Walker extends Walker_Page {
+
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+    }
+
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
+    }
+
+    function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) {
+
+        $indent = ( $depth ) ? str_repeat("\t", $depth) : '';
+
+        $has_children = get_pages( array(
+            'child_of' => $page->ID,
+            'parent'   => $page->ID,
+            'number'   => 1
+        ) );
+
+        $classes = array( 'nav-item' );
+
+        if ( $has_children ) {
+            $classes[] = 'dropdown';
+        }
+
+        $output .= $indent . '<li class="' . esc_attr( implode( ' ', $classes ) ) . '">';
+
+        $link_class = $has_children ? 'nav-link dropdown-toggle' : 'nav-link';
+
+        $atts  = ' class="' . esc_attr( $link_class ) . '"';
+        $atts .= ' href="' . esc_url( get_permalink( $page->ID ) ) . '"';
+
+        if ( $has_children ) {
+            $atts .= ' data-bs-toggle="dropdown" aria-expanded="false"';
+        }
+
+        $output .= '<a' . $atts . '>' . esc_html( $page->post_title ) . '</a>';
+    }
+
+    function end_el( &$output, $page, $depth = 0, $args = array() ) {
+        $output .= "</li>\n";
+    }
+}
+

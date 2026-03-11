@@ -49,9 +49,29 @@ global $dataOminis;
 				<div class="container">
 					<div class="row">
 						<div class="site-info col-10">
-							<?php echo $dataOminis['credits'];?>
-							<?php echo ( $dataOminis['cookies'] != 0 )?  "- <a class=\"link-light\" href=\"".get_permalink($dataOminis['cookies'])."\">".get_the_title($dataOminis['cookies'])."</a>" :  "";?>
-							<?php echo ( get_privacy_policy_url() != "" )?  "- <a class=\"link-light\" href=\"".get_privacy_policy_url()."\">".__( 'Privacy policy', 'ominis' )."</a>" :  "";?>
+							<?php 
+							// Credits
+							if ( isset( $dataOminis['credits'] ) ) {
+								echo wp_kses_post( $dataOminis['credits'] );
+							}
+
+							// Cookies page
+							if ( isset( $dataOminis['cookies'] ) && $dataOminis['cookies'] != 0 ) {
+								$cookies_id = intval( $dataOminis['cookies'] );
+								$cookies_url = get_permalink( $cookies_id );
+								$cookies_title = get_the_title( $cookies_id );
+
+								if ( $cookies_url && $cookies_title ) {
+									echo ' - <a class="link-light" href="' . esc_url( $cookies_url ) . '">' . esc_html( $cookies_title ) . '</a>';
+								}
+							}
+
+							// Privacy policy
+							$privacy_url = get_privacy_policy_url();
+							if ( ! empty( $privacy_url ) ) {
+								echo ' - <a class="link-light" href="' . esc_url( $privacy_url ) . '">' . esc_html__( 'Privacy policy', 'ominis' ) . '</a>';
+							}
+							?>
 						</div><!-- /.site-info -->
 						<div class="col-2 text-right">
 							<a href="#top" class="jquery-pag text-light">

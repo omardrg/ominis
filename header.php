@@ -50,7 +50,8 @@ global $dataOminis;
 								'container'			=> '',
 								'add_li_class'		=> 'nav-item', //function add_additional_class_on_li 
 								'add_a_class'		=> 'nav-link link-light- ', //function add_additional_class_on_a 
-								'depth'				=> 2
+								'depth'				=> 2,
+								'fallback_cb'       => 'ominis_fallback_menu'
 							) );
 							?>
 							<ul class="navbar-nav d-lg-flex flex-row justify-content-around">
