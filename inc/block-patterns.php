@@ -11,7 +11,7 @@
  * Register block patterns.
  */
 function ominis_register_block_patterns() {
-	// Ejemplo: Patrón de héroe con título y botón
+	// Example: Hero pattern with title and button
 	register_block_pattern(
 		'ominis/hero-section',
 		array(
@@ -34,7 +34,7 @@ function ominis_register_block_patterns() {
 		)
 	);
 
-	// Ejemplo: Patrón de tarjetas de características
+	// Example: Feature card pattern
 	register_block_pattern(
 		'ominis/features-cards',
 		array(
@@ -70,7 +70,7 @@ function ominis_register_block_patterns() {
 		)
 	);
 
-	// Ejemplo: Patrón de testimonial
+	// Example: Testimonial pattern
 	register_block_pattern(
 		'ominis/testimonial',
 		array(

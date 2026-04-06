@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header p-5 text-center bg-body-tertiary mb-4">
+	<header class="entry-header p-2 p-xl-5 text-center bg-body-tertiary mb-4">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );

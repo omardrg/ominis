@@ -18,8 +18,10 @@
 	$('#primary-menu .sub-menu li.active.dropdown-item').addClass('bg-secondary');
 	
 	// Navigation style
-	$('.navigation .nav-links').addClass('d-flex justify-content-between my-3');
+	$('.navigation .nav-links').addClass('d-flex flex-column flex-md-row justify-content-md-between my-3');
 	$('.navigation .nav-links a').addClass('btn btn-secondary text-white');
+	$('.navigation .nav-links .nav-previous').addClass('mb-3 mb-md-0');
+	$('.navigation .nav-links .nav-previous, .navigation .nav-links .nav-next').addClass('mx-auto mx-md-0');
 	$('.navigation .nav-links .nav-previous a').prepend('<i class="fas fa-angle-double-left"></i> ');
 	$('.navigation .nav-links .nav-next a').append(' <i class="fas fa-angle-double-right"></i>');
 	$('.navigation.post-navigation').addClass('border-bottom border-secondary pb-3');

@@ -3,8 +3,8 @@ Contributors: omardrg
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: blog, portfolio, custom-menu, custom-logo, featured-images, theme-options, translation-ready
 
 == Description ==
@@ -17,7 +17,16 @@ It includes Bootstrap 5 components, a responsive navigation menu, customizable t
 3. Assign a menu to the “Primary Menu” location.
 4. Configure theme options under Appearance → Customize.
 
+
 == Changelog ==
+= 2.0.3 =
+Fix “Trying to access array offset on false” warning
+Add unique prefixes to theme‑specific elements
+Keep underline styling for links inside the main content
+Fix mobile menu dropdown behavior
+Fix overflow issues with long titles
+Update other validation issues
+
 = 2.0.2 =
 Update validation issues
 
@@ -63,16 +72,18 @@ License: Commercial license OR GPLv3
 License URL: https://isotope.metafizzy.co/license.html  
 Source: https://isotope.metafizzy.co/  
 Included in: `/assets/isotope-3.0.6/`
+Isotope 3.0.6 is included under its GPLv3 license option.
 
 == Images ==
-All demo images included in the theme are either:
-- Created by the theme author, or  
-- Licensed under CC0 (public domain).  
+This theme includes only one image: screenshot.jpg.
 
-If CC0 images are used, their sources and licenses are listed in:  
-`/assets/images/licenses.txt`
+screenshot.jpg
+- Purpose: Required WordPress theme preview image.
+- Source: Created by the theme author.  
+- License: CC0 (public domain).  
+- No third‑party or AI‑generated images are used in this theme.
 
 == Notes ==
 All third‑party assets have been included unmodified and retain their original licenses.  
-The theme itself is licensed under GPLv2 or later, and all bundled assets are compatible with GPL requirements.
+The theme itself is licensed under GPLv3 or later, and all bundled assets are compatible with GPL requirements.
 

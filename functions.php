@@ -7,9 +7,9 @@
  * @package ominis
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'OMINIS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '2.0.2' );
+	define( 'OMINIS_VERSION', '2.0.3' );
 }
 
 /**
@@ -49,7 +49,7 @@ function ominis_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'ominis' ),
+			'ominis-menu-1' => esc_html__( 'Primary', 'ominis' ),
 		)
 	);
 
@@ -136,7 +136,7 @@ function ominis_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'ominis' ),
-			'id'            => 'sidebar-1',
+			'id'            => 'ominis-sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ominis' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -147,7 +147,7 @@ function ominis_widgets_init() {
 	register_sidebar( 
 		array(
 			'name'          => esc_html__( 'Social', 'ominis' ),
-			'id'            => 'social-1',
+			'id'            => 'ominis-social-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ominis' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -158,7 +158,7 @@ function ominis_widgets_init() {
 	register_sidebar( 
 		array(
 			'name'          => esc_html__( 'Footer', 'ominis' ).' 1',
-			'id'            => 'footer-1',
+			'id'            => 'ominis-footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'ominis' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -169,7 +169,7 @@ function ominis_widgets_init() {
 	register_sidebar( 
 		array(
 			'name'          => esc_html__( 'Footer', 'ominis' ).' 2',
-			'id'            => 'footer-2',
+			'id'            => 'ominis-footer-2',
 			'description'   => esc_html__( 'Add widgets here.', 'ominis' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -180,7 +180,7 @@ function ominis_widgets_init() {
 	register_sidebar( 
 		array(
 			'name'          => esc_html__( 'Footer', 'ominis' ).' 3',
-			'id'            => 'footer-3',
+			'id'            => 'ominis-footer-3',
 			'description'   => esc_html__( 'Add widgets here.', 'ominis' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
@@ -200,17 +200,17 @@ add_theme_support( 'post-formats', array( 'gallery' ) );
  * Enqueue scripts and styles.
  */
 function ominis_scripts() {
-	wp_enqueue_style( 'ominis-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'ominis-style', get_stylesheet_uri(), array(), OMINIS_VERSION );
 	wp_style_add_data( 'ominis-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'bootstrap-5-3-8', get_template_directory_uri() . '/assets/bootstrap-5.3.8-dist/css/bootstrap.min.css',array(),null);
 	wp_enqueue_style( 'fancybox-6-1-11', get_template_directory_uri() . '/assets/fancybox-6.1.11/fancybox.css',array(),null);
 	wp_enqueue_style( 'fancybox-compactmode-6-1-11', get_template_directory_uri() . '/assets/fancybox-6.1.11/fancybox.compactmode.css',array(),null);
 	wp_enqueue_style( 'fontawesome_7-2-0', get_template_directory_uri() . '/assets/fontawesome-free-7.2.0-web/css/all.min.css',array(),null);
 	
-	wp_enqueue_style( 'ominis-custom-style', get_template_directory_uri() . '/ominis.css', array(), '2.0.0' );
+	wp_enqueue_style( 'ominis-custom-style', get_template_directory_uri() . '/ominis.css', array(), '2.0.3' );
 	wp_enqueue_style( 'ominis-content-home', get_template_directory_uri() . '/layouts/content-home.css', array(), '2.0.0' );
 	
-	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'jquery_js-3-7-1', get_template_directory_uri() . '/assets/jquery-3.7.1.min.js', array(), null, true );
 	wp_enqueue_script( 'bootstrap_js-5-3-8', get_template_directory_uri() . '/assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js', array(), null, true );
 	wp_enqueue_script( 'fancybox_js-6-1-11', get_template_directory_uri() . '/assets/fancybox-6.1.11/fancybox.umd.js', array(), null, true );
 	wp_enqueue_script( 'fancybox_compactmode_js-6-1-11', get_template_directory_uri() . '/assets/fancybox-6.1.11/fancybox.compactmode.umd.js', array(), null, true );
@@ -224,42 +224,42 @@ function ominis_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	
-	wp_enqueue_script( 'functions_js', get_template_directory_uri() . '/js/functions.js', array(), '2.0.7', true );
+	wp_enqueue_script( 'ominis-functions-js', get_template_directory_uri() . '/js/functions.js', array(), OMINIS_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'ominis_scripts' );
 
 /**
  * We customized the menu by adding the option to customize the classes to the <li>.
  */
-function add_additional_class_on_li($classes, $item, $args) {
+function ominis_add_additional_class_on_li($classes, $item, $args) {
     if($args->add_li_class) {
         $classes[] = $args->add_li_class;
     }
     return $classes;
 }
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+add_filter('nav_menu_css_class', 'ominis_add_additional_class_on_li', 1, 3);
 
 /**
  * We customized the menu by adding the option to customize the classes to the <a>.
  */
-function add_additional_class_on_a($classes, $item, $args) {
+function ominis_add_additional_class_on_a($classes, $item, $args) {
     if($args->add_a_class) {
         $classes['class'] = $args->add_a_class;
     }
     return $classes;
 }
-add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+add_filter('nav_menu_link_attributes', 'ominis_add_additional_class_on_a', 1, 3);
 
 /**
  * We add the BS class "active" to the active link<a>.
  */
-function special_nav_class($classes, $item){
+function ominis_special_nav_class($classes, $item){
      if( in_array('current-menu-item', $classes) ){
              $classes[] = 'active ';
      }
      return $classes;
 }
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+add_filter('nav_menu_css_class' , 'ominis_special_nav_class' , 10 , 2);
 
 /**
  * Implement the Custom Header feature.
@@ -301,7 +301,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * I'm restoring the custom options.
  */
-$dataOminis = get_option('ominis_theme_options');
+$ominis_data = get_option('ominis_theme_options');
 
 
 /**
@@ -322,7 +322,7 @@ function ominis_menu(){
 function ominis_instrucciones() {
 ?>
 	<div class="wrap">
-		<h2><?php _e('Ominis Theme: Instructions','ominis');?>  <small>2.0.2</small></h2>
+		<h2><?php _e('Ominis Theme: Instructions','ominis');?>  <small>2.0.3</small></h2>
 		<h3><?php _e('Posts','ominis');?></h3>
 		<p><?php _e('The Ominis theme is optimized to display the latest posts on the homepage. To display them correctly, you need to configure the following for each post:','ominis');?></p>
 		<ol>
@@ -358,12 +358,12 @@ function ominis_instrucciones() {
 			</li>
 		</ol>
 		<h3><?php _e('Social networks','ominis');?></h3>
-		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance &gt; Customize: Social Networks</a>, you add the links to the social networks you want to display in the main menu.', 'ominis' ), admin_url('customize.php?autofocus[section]=rrss') ); ?></p>
+		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance &gt; Customize: Social Networks</a>, you add the links to the social networks you want to display in the main menu.', 'ominis' ), admin_url('customize.php?autofocus[section]=ominis_rrss') ); ?></p>
 		<p><?php echo sprintf( __( 'In the <a href="%1$s" target="_blank">Appearance & Widgets</a> menu, you can add social widgets to the <strong>Social</strong> bar.', 'ominis' ), admin_url('widgets.php') ); ?></p>
 		<h3><?php _e('Credits','ominis')?></h3>
-		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance > Customize: Footer</a>, you can change the text that appears in the credits area of ​​the footer.', 'ominis' ), admin_url('customize.php?autofocus[section]=footer') ); ?></p>
+		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance > Customize: Footer</a>, you can change the text that appears in the credits area of ​​the footer.', 'ominis' ), admin_url('customize.php?autofocus[section]=ominis_footer') ); ?></p>
 		<h3><?php _e('Cookies policy','ominis');?></h3>
-		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance > Customize: Footer</a>, select the page that will contain the website\'s cookie policy information.', 'ominis' ), admin_url('customize.php?autofocus[section]=footer') ); ?></p>
+		<p><?php echo sprintf( __( 'In the menu <a href="%1$s" target="_blank">Appearance > Customize: Footer</a>, select the page that will contain the website\'s cookie policy information.', 'ominis' ), admin_url('customize.php?autofocus[section]=ominis_footer') ); ?></p>
 	</div>
 <?php	
 }

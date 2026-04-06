@@ -11,29 +11,29 @@
  * Register block styles.
  */
 function ominis_register_block_styles() {
-	// Ejemplo: Registrar un estilo personalizado para el bloque de botón
+	// Example: Register a custom style for the button block
 	register_block_style(
 		'core/button',
 		array(
-			'name'  => 'custom-button',
+			'name'  => 'ominis-custom-button',
 			'label' => __( 'Custom Button', 'ominis' ),
 		)
 	);
 
-	// Ejemplo: Registrar un estilo personalizado para el bloque de imagen
+	// Example: Register a custom style for the image block
 	register_block_style(
 		'core/image',
 		array(
-			'name'  => 'image-shadow',
+			'name'  => 'ominis-image-shadow',
 			'label' => __( 'Image with Shadow', 'ominis' ),
 		)
 	);
 
-	// Ejemplo: Registrar un estilo personalizado para el bloque de párrafo
+	// Example: Register a custom style for the paragraph block
 	register_block_style(
 		'core/paragraph',
 		array(
-			'name'  => 'highlight-text',
+			'name'  => 'ominis-highlight-text',
 			'label' => __( 'Highlight Text', 'ominis' ),
 		)
 	);

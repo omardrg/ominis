@@ -9,17 +9,17 @@
  * @package ominis
  */
 
-global $dataOminis;
+global $ominis_data;
 ?>
 
 					</div> <!-- /.row -->
 				</div><!-- /.container -->
 			</div><!-- /#content -->
-			<?php if ( is_active_sidebar( 'social-1' ) ) : ?>
+			<?php if ( is_active_sidebar( 'ominis-social-1' ) ) : ?>
 				<aside class="py-3 bg-secondary text-white text-center">
 					<div class="row">
 						<div class="col-md">
-							<?php dynamic_sidebar('social-1'); ?>
+							<?php dynamic_sidebar('ominis-social-1'); ?>
 						</div><!-- /.col -->
 					</div>
 				</aside>
@@ -27,19 +27,19 @@ global $dataOminis;
 			<aside class="py-3 bg-light">
 				<div class="container">
 					<div class="row">
-					<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+					<?php if ( is_active_sidebar( 'ominis-footer-1' ) ) : ?>
 						<div class="col-md">
-							<?php dynamic_sidebar('footer-1'); ?>
+							<?php dynamic_sidebar('ominis-footer-1'); ?>
 						</div><!-- /.col -->
 					<?php endif; ?>
-					<?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+					<?php if ( is_active_sidebar( 'ominis-footer-2' ) ) : ?>
 						<div class="col-md">
-							<?php dynamic_sidebar('footer-2'); ?>
+							<?php dynamic_sidebar('ominis-footer-2'); ?>
 						</div><!-- /.col -->
 					<?php endif; ?>
-					<?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+					<?php if ( is_active_sidebar( 'ominis-footer-3' ) ) : ?>
 						<div class="col-md">
-							<?php dynamic_sidebar('footer-3'); ?>
+							<?php dynamic_sidebar('ominis-footer-3'); ?>
 						</div><!-- /.col -->
 					<?php endif; ?>
 					</div> <!-- /.row -->
@@ -51,13 +51,13 @@ global $dataOminis;
 						<div class="site-info col-10">
 							<?php 
 							// Credits
-							if ( isset( $dataOminis['credits'] ) ) {
-								echo wp_kses_post( $dataOminis['credits'] );
+							if ( isset( $ominis_data['credits'] ) ) {
+								echo wp_kses_post( $ominis_data['credits'] );
 							}
 
 							// Cookies page
-							if ( isset( $dataOminis['cookies'] ) && $dataOminis['cookies'] != 0 ) {
-								$cookies_id = intval( $dataOminis['cookies'] );
+							if ( isset( $ominis_data['cookies'] ) && $ominis_data['cookies'] != 0 ) {
+								$cookies_id = intval( $ominis_data['cookies'] );
 								$cookies_url = get_permalink( $cookies_id );
 								$cookies_title = get_the_title( $cookies_id );
 

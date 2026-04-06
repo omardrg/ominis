@@ -16,10 +16,6 @@
 
 a:not(header a)  {
 	color: #425d76;
-	text-decoration: none;
-	&:hover{
-		text-decoration: underline;
-	}
 }
 
 .updated:not(.published) {

@@ -9,7 +9,7 @@
  * @package ominis
  */
 
-global $dataOminis;
+global $ominis_data;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -29,7 +29,7 @@ global $dataOminis;
 			<header id="masthead" class="site-header">
 				<nav id="site-navigation" class="navbar navbar-expand-lg navbar-dark bg-dark " data-bs-theme="dark">
 					<div class="container">
-						<<?php echo (is_home())? 'h1' : 'h2';?> class="navbar-brand">
+						<<?php echo (is_home())? 'h1' : 'h2';?> class="navbar-brand text-truncate">
 							<a class="navbar-brand link-light- " href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> 
 						<?php
 						$ominis_description = get_bloginfo( 'description', 'display' );
@@ -44,39 +44,39 @@ global $dataOminis;
 						<div id="navbarSupportedContent" class="collapse navbar-collapse ">
 							<?php
 							wp_nav_menu( array(
-								'theme_location'	=> 'menu-1',
+								'theme_location'	=> 'ominis-menu-1',
 								'menu_id'			=> 'primary-menu',
 								'menu_class'		=> 'navbar-nav ms-auto ',
 								'container'			=> '',
-								'add_li_class'		=> 'nav-item', //function add_additional_class_on_li 
-								'add_a_class'		=> 'nav-link link-light- ', //function add_additional_class_on_a 
+								'add_li_class'		=> 'nav-item', //function ominis_add_additional_class_on_li
+								'add_a_class'		=> 'nav-link link-light- ', //function ominis_add_additional_class_on_a
 								'depth'				=> 2,
 								'fallback_cb'       => 'ominis_fallback_menu'
 							) );
 							?>
 							<ul class="navbar-nav d-lg-flex flex-row justify-content-around">
-							<?php if ($dataOminis['facebook']!='') {?>
+							<?php if ( isset( $ominis_data['facebook'] ) && $ominis_data['facebook'] != '' ) { ?>
 								<li class="nav-item">
-									<a class="nav-link link-light- " href="<?php echo $dataOminis['facebook'];?>" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+									<a class="nav-link link-light- " href="<?php echo $ominis_data['facebook'];?>" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
 								</li>
 							<?php } ?>
-							<?php if ($dataOminis['twitter']!='') {?>
+							<?php if ( isset( $ominis_data['twitter'] ) && $ominis_data['twitter'] != '' ) { ?>
 								<li class="nav-item">
-									<a class="nav-link link-light- " href="<?php echo $dataOminis['twitter'];?>" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+									<a class="nav-link link-light- " href="<?php echo $ominis_data['twitter'];?>" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
 								</li>
 							<?php } ?>
-							<?php if ($dataOminis['instagram']!='') {?>
+							<?php if ( isset( $ominis_data['instagram'] ) && $ominis_data['instagram'] != '' ) { ?>
 								<li class="nav-item">
-									<a class="nav-link link-light- " href="<?php echo $dataOminis['instagram'];?>" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+									<a class="nav-link link-light- " href="<?php echo $ominis_data['instagram'];?>" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
 								</li>
 							<?php } ?>
-							<?php if ($dataOminis['pinterest']!='') {?>
+							<?php if ( isset( $ominis_data['pinterest'] ) && $ominis_data['pinterest'] != '' ) { ?>
 								<li class="nav-item">
-									<a class="nav-link link-light- " href="<?php echo $dataOminis['pinterest'];?>" target="_blank"><i class="fab fa-pinterest-square fa-2x"></i></a>
+									<a class="nav-link link-light- " href="<?php echo $ominis_data['pinterest'];?>" target="_blank"><i class="fab fa-pinterest-square fa-2x"></i></a>
 								</li>
 							<?php } ?>
-							<?php if ($dataOminis['email']!='') {
-								$txtEmail = explode('@',$dataOminis['email']);
+							<?php if ( isset( $ominis_data['email'] ) && $ominis_data['email'] != '' ) {
+								$txtEmail = explode('@',$ominis_data['email']);
 								?>
 								<li class="nav-item" id="ominisEmailAddress" data-str1="<?php echo $txtEmail[0];?>" data-str2="<?php echo $txtEmail[1];?>">
 									<a class="nav-link link-light- " href="mailto:" target="_blank"><i class="fas fa-envelope-square fa-2x"></i></a>

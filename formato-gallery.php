@@ -1,6 +1,6 @@
 	<div class="entry-content">
 		<div class="text-center mb-3 ">
-			<div class="btn-group filter-button-group" role="group" aria-label="Basic example">
+			<div class="btn-group filter-button-group flex-wrap" role="group" aria-label="Masonry Filter">
 				<button type="button" class="btn btn-secondary border-light active" data-filter="*"><?php _e( 'Show all', 'ominis' ); ?></button>
 
 			</div><!-- /.btn-group -->

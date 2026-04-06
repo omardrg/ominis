@@ -35,12 +35,12 @@ function ominis_customize_register( $wp_customize ) {
 	/**
 	 * Social networks.
 	 */
-	$wp_customize->add_section( 'rrss', array(
+	$wp_customize->add_section( 'ominis_rrss', array(
 		'title'			=> __( 'RRSS', 'ominis' ),
 		'priority'		=> 35
 	) );
-	$rrss = array('facebook','twitter','instagram','pinterest');
-	foreach($rrss as $rs){
+	$ominis_rrss = array('facebook','twitter','instagram','pinterest');
+	foreach($ominis_rrss as $rs){
 		$wp_customize->add_setting("ominis_theme_options[$rs]", array(
 			'default'	=> '',
 			'capability'=> 'edit_theme_options',
@@ -49,12 +49,12 @@ function ominis_customize_register( $wp_customize ) {
 		));
 		$wp_customize->add_control("ominis_$rs", array(
 			'label'		=> ucfirst($rs),
-			'section'	=> 'rrss',
+			'section'	=> 'ominis_rrss',
 			'settings'	=> "ominis_theme_options[$rs]",
 		));
 	}
-	$rrss = array('email');
-	foreach($rrss as $rs){
+	$ominis_rrss = array('email');
+	foreach($ominis_rrss as $rs){
 		$wp_customize->add_setting("ominis_theme_options[$rs]", array(
 			'default'	=> '',
 			'capability'=> 'edit_theme_options',
@@ -63,7 +63,7 @@ function ominis_customize_register( $wp_customize ) {
 		));
 		$wp_customize->add_control("ominis_$rs", array(
 			'label'		=> ucfirst($rs),
-			'section'	=> 'rrss',
+			'section'	=> 'ominis_rrss',
 			'settings'	=> "ominis_theme_options[$rs]",
 		));
 	}
@@ -71,7 +71,7 @@ function ominis_customize_register( $wp_customize ) {
 	/**
 	 * Footer.
 	 */
-	$wp_customize->add_section( 'footer', array(
+	$wp_customize->add_section( 'ominis_footer', array(
 		'title'			=> __( 'Footer', 'ominis' ),
 		'priority'		=> 120
 	) );
@@ -84,7 +84,7 @@ function ominis_customize_register( $wp_customize ) {
 	$wp_customize->add_control("ominis_credits", array(
 		'label'			=> __( 'Credits', 'ominis' ),
 		'type'			=> 'textarea',
-		'section'		=> 'footer',
+		'section'		=> 'ominis_footer',
 		'settings'		=> "ominis_theme_options[credits]",
 	));
 	
@@ -104,7 +104,7 @@ function ominis_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_control("ominis_cookies", array(
 		'label'			=> __( 'Cookies advice page', 'ominis' ),
-		'section'		=> 'footer',
+		'section'		=> 'ominis_footer',
 		'settings'		=> "ominis_theme_options[cookies]",
 		'type'			=> 'select',
 		'choices'		=> $selector
@@ -141,6 +141,6 @@ function ominis_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function ominis_customize_preview_js() {
-	wp_enqueue_script( 'ominis-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+	wp_enqueue_script( 'ominis-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), OMINIS_VERSION, true );
 }
 add_action( 'customize_preview_init', 'ominis_customize_preview_js' );

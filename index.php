@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-		<main id="primary" class="site-main content-area <?php if (is_active_sidebar( 'sidebar-1' )): echo 'col-md-8'; else : echo 'col-md-12'; endif?> py-3">
+		<main id="primary" class="site-main content-area <?php if (is_active_sidebar( 'ominis-sidebar-1' )): echo 'col-md-8'; else : echo 'col-md-12'; endif?> py-3">
 			<div class="row">
 			<?php
 			if ( have_posts() ) :
@@ -51,7 +51,7 @@ get_header();
 			?>
 			</div><!-- /.row -->
 		</main><!-- #primary -->
-<?php if (is_active_sidebar( 'sidebar-1' )) { ?>	
+<?php if (is_active_sidebar( 'ominis-sidebar-1' )) { ?>	
 		<div class="col-md-4">
 			<?php get_sidebar(); ?>
 		</div><!-- /.col -->
